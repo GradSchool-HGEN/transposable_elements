@@ -1,0 +1,18 @@
+2018-01-15 10:21:52
+Abin Abraham 
+
+
+optimize_fimo.py
+- temp file to optmize fimo run 
+
+run_fimo_repeatmasker.py
+- python wrapper to run FIMO 
+
+run_fimo_repeatmasker.slurm
+- SLURM script to submit run_fimo_repeatmasker
+
+2018-01-27 14:02:37
+calc_reg_potential.py
+- 
+calc_reg_potential_TFdetails.py
+- 
