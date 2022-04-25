@@ -1,0 +1,9 @@
+Abin Abraham
+2018-01-25 19:17:19
+
+
+
+all-fimo-out-withTFCoord-filtered-TE-intersect.tsv
+- copied from /dors/capra_lab/abraha1/results/TFanalysis-human-fantom5/facet_expressed_enhancers/alltxt/allfacets/all-fimo-out-withTFCoord-filtered-TE-intersect.tsv
+-intersected TF motif coordinated with TE 
+-bedtools intersect -wa -wa -loj -a all-fimo-out-withTFCoord-filtered.tsv -b /dors/capra_lab/data/transposable_elements/repeatmasker/hg38-TE-repeatMasker.tsv
