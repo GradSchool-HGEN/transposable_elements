@@ -1,0 +1,10 @@
+Abin Abraham
+2018-03-05 08:40:04
+
+filer_extract _from_multiz46way.sh 
+- output is one file per chromosome 
+- TO DO: concatenate all chrm files into one file 
+- TO DO: run mafOrder to reorder species (so that format is nicer for parse_maf.py script)
+
+meme2PSPM.py
+- copied from /dors/capra_lab/abraha1/bin/global_scripts/tf_motifs/meme2PSPM.py

@@ -1,0 +1,4 @@
+------------------------------------------------------------------------------------------
+creating mapping to consensus for: X1_LR
+
+X1_LR mapping dictionary already exists, therefore exiting program!

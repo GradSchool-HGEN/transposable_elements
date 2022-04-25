@@ -1,0 +1,12 @@
+2018-03-23 11:32:55
+Abin Abraham
+
+alu/ 
+- analysis of Alu elements based on Su, M. et al., 2014. Evolution of Alu elements toward enhancers. CellReports, 7(2), pp.376–385.
+
+comparative/
+- using multiple speicies alignment to look at TF motif turnover 
+
+MER20/
+- ran TE_annotate.py (map MER20 to its consensus) for a limited number of TF 
+

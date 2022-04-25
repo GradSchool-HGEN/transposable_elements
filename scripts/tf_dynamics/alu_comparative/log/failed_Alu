@@ -1,0 +1,10 @@
+AluSx_motifDiverge --> only 26076725_275  AluSx_motifDiverge
+AluYa5_motifDiverge --> 252, 253, 254, 255, 257, 260, 262, 263, 264, 265, 268, 269, 270, 272, 273, 275, failed 
+AluYb8_motifDiverge --> only 275
+AluY_motifDiverge --> all 1-275 
+
+
+
+ 275 -> ddid not have pspm 
+ AluYa5_motifDiverge --> 252,253 failed because subscript out of index; there were only 2 sequences 
+Note: need to handle odd inputs
