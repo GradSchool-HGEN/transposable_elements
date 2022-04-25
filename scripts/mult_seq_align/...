@@ -1,0 +1,56 @@
+#!/bin/python
+# This script will create a mapping dictionary for a given transposable element.
+# > Mapping dictionary: for a given locus (key) :  (maps indicies for genomic instance of element (key): to indicies in consensus (value)) (value)
+#
+# > Depends on: 
+#           "/dors/capra_lab/abraha1/projects/transposable_elements/data/dfam/temp.muscle.out"  
+# 
+# 
+# Abin Abraham
+# created on: ...2017-12-20 08:42:13
+
+import re
+import sys
+import argparse
+import numpy as np
+from Bio import AlignIO
+
+#-------
+# functions
+#-------
+
+def createMapDict(multSeqAlig_PATH):
+    multAlign = AlignIO.read(multSeqAlig_PATH, 'fasta')
+
+    getLetterIndices = lambda x: np.array([m.start() for m in re.finditer('[TGAC]', x)])
+
+    consLength = multAlign.get_alignment_length()
+    seqList = [x.id  for x in multAlign._records]
+    mapValues = [[getLetterIndices(str(x.seq)), consLength] for x in multAlign._records]
+
+    indexMap = dict(zip(seqList, mapValues))
+
+    return indexMap
+
+
+def main(argv):
+    ## arg parse 
+    parser = argparse.ArgumentParser(description="creates a dictionary that maps an transopsable element to a consensus")
+    parser.add_argument("multSeqAligFilePATH", default='None',
+                    action='store', type=str,
+                    help="path to multiple seq alignment file in fasta format") 
+    
+    argsIN = parser.parse_args()
+    main_multSeqAlignPATH= argsIN.multSeqAligFilePATH
+    
+    ## commands to run 
+    # multSeqAlig_PATH = "/dors/capra_lab/abraha1/projects/transposable_elements/data/dfam/temp.muscle.out" 
+    createMapDict(main_multSeqAlignPATH)
+#-------
+# main
+#-------
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
+    #create output folder and put contents there 
